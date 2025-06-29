@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html>
   <head>
@@ -8,13 +7,21 @@
     <script src="https://cdn.jsdelivr.net/npm/pixi.js@7.3.2/dist/pixi.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
   </head>
   <body>
     <div id="game-container">
       <h1 style="color: #00ff88; text-align: center; margin-bottom: 10px;"> Colored Balls and Obstacle Escape</h1>
       <p style="color: #ffffff; text-align: center; margin-bottom: 20px; font-size: 14px;">
-       Keyboard: WASD / Arrow keys | Touch: Drag your finger | R: Restart
+       Click START GAME or press SPACE to begin | WASD / Arrow keys to move | Touch: Drag your finger | R: Restart | M: Toggle Music | P: Pause
       </p>
+      <div id="start-menu" style="text-align: center; margin-bottom: 10px;">
+        <button id="start-game-btn" onclick="startGame(); return false;" style="background: linear-gradient(45deg, #00ff88, #00cc6a); border: none; padding: 15px 30px; border-radius: 8px; color: #000; cursor: pointer; font-size: 18px; font-weight: bold; box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3); transition: all 0.3s ease;">🎮 START GAME</button>
+      </div>
+      <div id="audio-controls" style="text-align: center; margin-bottom: 10px;">
+        <button id="toggle-music" style="background: #00ff88; border: none; padding: 8px 16px; border-radius: 4px; color: #000; cursor: pointer;">🔊 Music: ON</button>
+        <button id="toggle-sfx" style="background: #00ff88; border: none; padding: 8px 16px; border-radius: 4px; color: #000; cursor: pointer; margin-left: 10px;">🔊 SFX: ON</button>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>
